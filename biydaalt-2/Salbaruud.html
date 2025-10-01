@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+    .branches-section{
+      height: 85vh;
+    }
+   
+
+    /* Section title */
+    .branches-section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #003399;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    /* Card container */
+    .branches-list {
+      list-style: none;
+      max-width: 1200px;
+      margin: 0 auto;
+     
+    }
+    .branches-list li + li {
+      margin-top: 16px;
+    }
+
+    /* Single card */
+    .branch-card {
+      display: flex;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* Image */
+    .branch-card img {
+      width: 240px;
+      height: auto;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    /* Content */
+    .branch-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+    .branch-info h3 {
+      font-size: 16px;
+      color: #1B3D7A;
+      margin-bottom: 8px;
+    }
+    .branch-info .detail {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .branch-info .detail:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Icon */
+    .branch-info .detail i {
+      font-size: 16px;
+      color: #003399;
+      width: 20px;
+      text-align: center;
+    }
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medee medeelel</title>
+    <link rel="stylesheet" href="styles.css">
+
+     <!--
+    - google font link
+    -->
+    <script src="https://kit.fontawesome.com/a416c71398.js" crossorigin="anonymous"></script>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    </head>
+<body>
+  <header>
+    <!-- header top -->
+      <div class="header-top">
+        <div class="container-top">
+            <ul class="header-social-container">
+    
+              <li class="nav-item-left"><b>Утас:</b> +976 7505-1515 , +976 8889-8998
+                &nbsp&nbsp</li>
+    
+              <li class="nav-item-left"><b>И-Мэйл:</b>info@new-tech.mn
+              </li>
+    
+              <li class="nav-item-right"><b>хаяг:</b>  Компьютер ландын ард ХАА-н 30 байрны 1 давхарт </li>    
+            </ul>
+        </div>
+      </div>
+
+    <!-- header main -->
+      <div class="navbar">
+        <a href="index.html" class="header-logo">
+          <img src="images/logo.png" alt="new-teck" width="120" height="36">
+        </a>
+        <div  class="container-main">
+       
+          <div class="header-search-container">
+            <input class="search-field" type="search" name="search-field" placeholder="Бүтээгдэхүүн хайх" >
+            <ion-icon class="search-outline" name="search-outline"></ion-icon>
+          </div>
+          <div class="header-user-actions">
+            <button class="login-register">
+              <ion-icon class="person-outline" name="person-outline"></ion-icon>
+              <span><a href="login-register.html" style="display: flex; text-decoration: none; color: white;">Login&nbsp/&nbspRegister</a></span>
+            </button>
+            <div class="divider"></div>
+            <button type="button" class="action-btn">
+              
+             <a href="Buteegdehuun-angilal.html"> <ion-icon class="icon-wrapper" name="albums-outline"></ion-icon></a>
+              <span class="count">0</span>
+            </button>
+            <button type="button" class="action-btn">
+             <a href="Buteegdehuun-angilal.html"> <ion-icon class="icon-wrapper" name="star-outline"></ion-icon></a>
+                <span class="count">0</span>
+            </button>
+            <button type="button" class="action-btn">
+              <a href="Baraanii delgerengui.html"><ion-icon class="icon-wrapper" name="bag-outline"></ion-icon></a>
+              <span class="count">0</span>
+            </button>
+          </div>
+        </div>
+        
+        
+        <div class="mobile">
+          <div class="icon" id="bar">☰</div>
+        </div>
+  
+      </div>
+      
+    <!-- header navigation -->
+      <div class="desktop-navigation-menu">
+
+        <div class="container-navbar">
+  
+          <ul id="navbar-menu" class="desktop-menu-category-list">
+  
+            <li class="menu-left">
+              <a href="Buteegdehuun-angilal.html" class="menu-title">Бүтээгдэхүүний ангилал</a>
+              <ion-icon class="drop-icon"  name="chevron-down-outline"></ion-icon>
+              <div class="dropdown-panel">
+
+                <div class="dropdown-group primary-group">
+            
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Компьютерын хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">CPU</a></li>
+                    <li class="penal-list-item"><a href="#">Motherboard</a></li>
+                    <li class="penal-list-item"><a href="#">Ram</a></li>
+                    <li class="penal-list-item"><a href="#">SSD/NVME M2</a></li>
+                    <li class="penal-list-item"><a href="#">HDD</a></li>
+                    <li class="penal-list-item"><a href="#">Graphic Card</a></li>
+                    <li class="penal-list-item"><a href="#">Power Supply</a></li>
+                    <li class="penal-list-item"><a href="#">Coolers</a></li>
+                    <li class="penal-list-item"><a href="#">Computer Cases</a></li>
+                  </ul>
+              
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Дагалдах хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">Mouse</a></li>
+                    <li class="penal-list-item"><a href="#">Keyboards</a></li>
+                    <li class="penal-list-item"><a href="#">Headsets</a></li>
+                    <li class="penal-list-item"><a href="#">Mouse Pads</a></li>
+                    <li class="penal-list-item"><a href="#">Microphone</a></li>
+                    <li class="penal-list-item"><a href="#">Web Camera</a></li>
+                    <li class="penal-list-item"><a href="#">Speaker</a></li>
+                  </ul>
+
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Бусад хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">Тоглоомын сандал & ширээ</a></li>
+                    <li class="penal-list-item"><a href="#">Fans</a></li>
+                    <li class="penal-list-item"><a href="#">Cable | Converter</a></li>
+                    <li class="penal-list-item"><a href="#">Network Devices</a></li>
+                    <li class="penal-list-item"><a href="#">Figures & Toys</a></li>
+                    <li class="penal-list-item"><a href="#">Программ хангамж</a></li>
+                    <li class="penal-list-item"><a href="#">Бусад</a></li>
+                  </ul>
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title">
+                      <img src="images/drop-imgae.jpg" width="400px" height="300px" >
+                     &nbsp&nbsp&nbsp
+                    </li>
+                  </ul>
+                </div>          
+                <div class="dropdown-group secondary-group">
+
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a class="drop-title" href="Buteegdehuun-angilal.html">Дэлгэц</a></li>
+                    <li class="drop-menu-title"><a class="drop-title" href="#">Playstation</a></li>
+                    <li class="penal-list-item"><a class="penal-a" href="#">PS5 & Accessories</a></li>
+                    <li class="penal-list-item"><a class="penal-a" href="#">Games</a></li>
+                  </ul>
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Хадгалах хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">Зөөврийн хард</a></li>
+                    <li class="penal-list-item"><a href="#">Флаш диск</a></li>
+                    <li class="penal-list-item"><a href="#">Memory card</a></li>
+                  </ul>
+            
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Принтер</a></li>
+                    <li class="penal-list-item"><a href="#">Принтер</a></li>
+                    <li class="penal-list-item"><a href="#">Принтерийн хор</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu-left">
+              <a href="computer-builder" class="menu-title">Компьютер угсрах</a>
+            </li>
+  
+            <li class="menu-left">
+              <a href="Buteegdehuun-angilal.html" class="menu-title">Бэлэн Компьютер</a>
+              <ion-icon class="drop-icon"  name="chevron-down-outline"></ion-icon>
+              <div class="dropdown-panel-second">
+                <div class="dropdown-group-second">
+                  <ul class="drop-second-list">
+                    <li class="penal-list-second"><a href="#">Gaming & Render</a></li>
+                    <li class="penal-list-second"><a href="#">Office</a></li>
+                  </ul>
+                </div>
+              </div>  
+            </li>
+            <li class="menu-left">
+              <a href="Upgrage.html" class="menu-title">Upgrage now</a>
+            </li>
+            <li class="menu-right">
+              <a href="Salbaruud.html" class="menu-title">Салбарууд</a>
+            </li>
+            <li class="menu-right">
+              <a href="Holboo-barih.html" class="menu-title">Холбоо барих</a>
+            </li>
+            <a  href="#" id="close">X</a>
+
+            <div class="navbar-search-container">
+              <input class="search-field" type="search" name="search-field" placeholder="Бүтээгдэхүүн хайх" >
+              <ion-icon class="search-outline" name="search-outline"></ion-icon>
+            </div>
+          </ul>
+    
+        </div>
+      
+      </div>
+      
+  </header>
+    <section class="branches-section">
+      <h2>Салбарууд</h2>
+      <ul class="branches-list">
+    
+        <li>
+          <div class="branch-card">
+            <img src="images/holboo-barih-1.webp" alt="Newtech салбар 1">
+            <div class="branch-info">
+              <h3>Newtech салбар 1</h3>
+              <div class="detail">
+                <i class="ion-md-pin"></i>
+                <span>Компьютер ландын ард ХАА‑н 30 байрны 1 давхарт NewTech компьютерийн дэлгүүр</span>
+              </div>
+              <div class="detail">
+                <i class="ion-md-call"></i>
+                <span>+976 7505 1515, 8889 8998</span>
+              </div>
+            </div>
+          </div>
+        </li>
+    
+        <li>
+          <div class="branch-card">
+            <img src="images/holboo-barih-2.webp" alt="Newtech салбар 2">
+            <div class="branch-info">
+              <h3>Newtech салбар 2</h3>
+              <div class="detail">
+                <i class="ion-md-pin"></i>
+                <span>УБ хот, ЧД 2‑хороо, Компьютер ланд төв, 2 давхарт 204 тоот</span>
+              </div>
+              <div class="detail">
+                <i class="ion-md-call"></i>
+                <span>+976 8932 3300, 9900 8332</span>
+              </div>
+            </div>
+          </div>
+        </li>
+    
+        <li>
+          <div class="branch-card">
+            <img src="images/holboo-barih-3.webp" alt="Newtech салбар 3">
+            <div class="branch-info">
+              <h3>Newtech салбар 3</h3>
+              <div class="detail">
+                <i class="ion-md-pin"></i>
+                <span>УБ хот, ЧД 2‑хороо, Компьютер ланд төв, 3 давхарт 303 тоот</span>
+              </div>
+              <div class="detail">
+                <i class="ion-md-call"></i>
+                <span>+976 9988 0260, 8677 0260</span>
+              </div>
+            </div>
+          </div>
+        </li>
+    
+      </ul>
+    </section>
+
+
+    <!-- <section>
+      <div class="section-container">
+        <div class="side-bar"><p>side bar</p></div>
+        <div class="body-area"><p>body area</p></div>
+      </div>
+    </section> -->
+   
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-list logo">
+          <div class="footer-left-icons">
+            <img src="images/logo.png" alt="Newtech logo" class="logo-img">
+          <p>Feel the new technology</p>
+          <div class="social-foooter-icons">
+            <ion-icon class="icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="icon" name="logo-pinterest"></ion-icon>
+            <ion-icon class="icon" name="logo-linkedin"></ion-icon>
+            <ion-icon class="icon" name="logo-instagram"></ion-icon>
+          </div>
+          </div>
+        </div>
+    
+        <div class="footer-list">
+          <h3>Үндсэн цэс</h3>
+          <ul>
+            <li><a href="Buteegdehuun-angilal.html">Бүтээгдэхүүний Ангилал</a></li>
+            <li><a href="computer-builder.html">Компьютер Угсрах</a></li>
+            <li><a href="#">Файл татах</a></li>
+            <li><a href="Holboo-barih.html">Холбоо Барих</a></li>
+            <li><a href="Salbaruud.html">Салбарууд</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-list">
+          <h3>Туслах цэс</h3>
+          <ul>
+            <li><a href="medee-medeelel.html">Мэдээ, Мэдээлэл</a></li>
+            <li><a href="#">Түгээмэл Асуулт</a></li>
+            <li><a href="#">Тусламж</a></li>
+            <li><a href="#">Үйлчилгээний Нөхцөл</a></li>
+            <li><a href="Sanal huselt.html">Санал Хүсэлт</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-list">
+          <h3>Холбоо барих</h3>
+            <ul>
+              <li><ion-icon class="icon-right" name="call-outline"></ion-icon> +976 75051515</li>
+              <li><ion-icon class="icon-right" name="paper-plane-outline"></ion-icon> info@new-tech.mn</li>
+              <li><ion-icon class="icon-right" name="map-outline"></ion-icon></i> Компьютер ландын ард ХАА-н 30 байрны 1 давхарт NewTech компьютерийн дэлгүүр</li>
+            </ul>
+          
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      &copy; 2024 CREATED BY <span class="highlight">NEWTECH LLC</span>. All Rights Reserved
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  	<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

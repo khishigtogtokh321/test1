@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab7</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
+
+     <!--
+    - google font link
+    -->
+    <script src="https://kit.fontawesome.com/a416c71398.js" crossorigin="anonymous"></script>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      #bg-img{
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),  url("images/background-image.jpg");
+        width: auto;
+        height: 70vh;
+        background-size: cover;
+        background-position: center;
+        /* background-attachment: fixed; */
+      }
+        
+      .hero-content{
+        position: absolute;
+        top: 50%;
+        left: 70px;
+        transform: translateY(-50%);
+      }
+      .btn-container{
+        position: absolute;
+        top: 64%;
+        left: 70px;
+        transform: translateY(-50%);
+      }
+
+      .hero-content h3{
+        color: yellow;
+        font-size: 40px;
+        text-transform: capitalize;
+        margin: 20px 0;
+      }
+
+      .hero-content h3 span{
+        color: #ee3761;
+      }
+
+      .btn-container .btn {
+        font-size: 16px;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      .btn-container .btn {
+        font-size: 16px;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      .btn {
+        padding: 10px 25px;
+        background-color: none;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+        border: 1px solid darkblue;
+        transition: ease 1.3s;
+      }
+
+      .btn:hover{
+        background-color: transparent;
+        background-color: darkblue;
+        color: white;
+      }
+
+    </style>
+
+    </head>
+<body>
+
+  <!-- header -->
+    <header>
+      <!-- header top -->
+        <div class="header-top">
+          <div class="container-top">
+              <ul class="header-social-container">
+      
+                <li class="nav-item-left"><b>Утас:</b> +976 7505-1515 , +976 8889-8998
+                  &nbsp&nbsp</li>
+      
+                <li class="nav-item-left"><b>И-Мэйл:</b>info@new-tech.mn
+                </li>
+      
+                <li class="nav-item-right"><b>хаяг:</b>  Компьютер ландын ард ХАА-н 30 байрны 1 давхарт </li>    
+              </ul>
+          </div>
+        </div>
+
+      <!-- header main -->
+        <div class="navbar">
+          <a href="#" class="header-logo">
+            <img src="images/logo.png" alt="new-teck" width="120" height="36">
+          </a>
+          <div  class="container-main">
+         
+            <div class="header-search-container">
+              <input class="search-field" type="search" name="search-field" placeholder="Бүтээгдэхүүн хайх" >
+              <ion-icon class="search-outline" name="search-outline"></ion-icon>
+            </div>
+            <div class="header-user-actions">
+              <button class="login-register">
+                <ion-icon class="person-outline" name="person-outline"></ion-icon>
+                <span>Login&nbsp/&nbspRegister</span>
+              </button>
+              <div class="divider"></div>
+              <button type="button" class="action-btn">
+                <ion-icon class="icon-wrapper" name="albums-outline"></ion-icon>
+                <span class="count">0</span>
+              </button>
+              <button type="button" class="action-btn">
+                <ion-icon class="icon-wrapper" name="star-outline"></ion-icon>
+                  <span class="count">0</span>
+              </button>
+              <button type="button" class="action-btn">
+                <ion-icon class="icon-wrapper" name="bag-outline"></ion-icon>
+                <span class="count">0</span>
+              </button>
+            </div>
+          </div>
+          
+          
+          <div class="mobile">
+            <div class="icon" id="bar">☰</div>
+          </div>
+    
+        </div>
+        
+      <!-- header navigation -->
+        <div class="desktop-navigation-menu">
+
+          <div class="container-navbar">
+    
+            <ul id="navbar-menu" class="desktop-menu-category-list">
+    
+              <li class="menu-left">
+                <a href="#" class="menu-title">Бүтээгдэхүүний ангилал</a>
+                <ion-icon class="drop-icon"  name="chevron-down-outline"></ion-icon>
+             
+              </li>
+              <li class="menu-left">
+                <a href="#" class="menu-title">Компьютер угсрах</a>
+              </li>
+    
+              <li class="menu-left">
+                <a href="#" class="menu-title">Бэлэн Компьютер</a>
+                <ion-icon class="drop-icon"  name="chevron-down-outline"></ion-icon>
+                  
+              </li>
+              <li class="menu-left">
+                <a href="#" class="menu-title">Upgrage now</a>
+              </li>
+              <li class="menu-right">
+                <a href="#" class="menu-title">Салбарууд</a>
+              </li>
+              <li class="menu-right">
+                <a href="#" class="menu-title">Холбоо барих</a>
+              </li>
+              <a  href="#" id="close">X</a>
+
+              <div class="navbar-search-container">
+                <input class="search-field" type="search" name="search-field" placeholder="Бүтээгдэхүүн хайх" >
+                <ion-icon class="search-outline" name="search-outline"></ion-icon>
+              </div>
+            </ul>
+      
+          </div>
+        
+        </div>
+        
+    </header>
+
+   
+
+    <!-- section -->
+    <section class="sec" style="background-color: aliceblue; width: auto; height: 100%;" >
+      <div class="section-container">
+        <div class="card"><img src="images/cpu.webp" alt="CPU"><p>CPU</p></div>
+        <div class="card"><img src="images/mboard.webp" alt="Motherboard"><p>Motherboard</p></div>
+        <div class="card"><img src="images/nram-1.webp" alt="RAM"><p>RAM</p></div>
+        <div class="card"><img src="images/nssd2.webp" alt="SSD"><p>SSD</p></div>
+        <div class="card"><img src="images/gpu.webp" alt="GPU"><p>GPU</p></div>
+        <div class="card"><img src="images/npsu-1.webp" alt="PSU"><p>PSU</p></div>
+        <div class="card"><img src="images/ncooler.webp" alt="Cooler"><p>Cooler</p></div>
+        <div class="card"><img src="images/27casenzxt.webp" alt="Case"><p>Case</p></div>
+        <div class="card"><img src="images/monitor.webp" alt="Monitor"><p>Monitor</p></div>
+        <div class="card"><img src="images/nps5.webp" alt="PS5"><p>PS5</p></div>
+        <div class="card"><img src="images/111-1.webp" alt="Mouse"><p>Mouse</p></div>
+        <div class="card"><img src="images/26keyboardlogi.webp" alt="Keyboard"><p>Keyboard</p></div>
+        <div class="card"><img src="images/nheadset.webp" alt="Headset"><p>Headset</p></div>
+        <div class="card"><img src="images/nchair.webp" alt="Chair"><p>Chair</p></div>
+        <div class="card"><img src="images/nlaptop.webp" alt="Laptop"><p>Laptop</p></div>
+        <div class="card"><img src="images/nprinter.webp" alt="Printer"><p>Printer</p></div>
+      </div>
+    </section>
+
+
+    <!-- ontsloh buteegdehun -->
+     <section class="section-2">
+      <h2 class="title">ОНЦЛОХ БҮТЭЭГДЭХҮҮН</h2>
+      <div class="special-container">
+        <div class="product-grid">
+          <div class="product">
+            <img src="images/zowie.webp" alt="ZOWIE Monitor">
+            <p>ZOWIE XL2566X+ Fast TN 400Hz DyAc</p>
+            <span>2,600,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/asusrog.webp" alt="ASUS ROG Strix">
+            <p>ASUS ROG Strix XG259QNS-W 25</p>
+            <span>1,600,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/asusrog.webp" alt="Asus TUF Gaming">
+            <p>Asus TUF GAMING Z890-Plus Wifi D5</p>
+            <span>1,300,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/intelcore2.webp" alt="Intel Core Ultra 5">
+            <p>Intel Core Ultra 5 245K CPU</p>
+            <span>1,250,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/logitech.webp" alt="Logitech G PRO X 60">
+            <p>Logitech G PRO X 60 LIGHTSPEED</p>
+            <span>700,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/ps5.png" alt="PS5">
+            <p>Sony PlayStation 5 Pro Japan Digital</p>
+            <span>3,100,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/ryzen.webp" alt="Ryzen 7">
+            <p>AMD Ryzen 7 9800X3D CPU</p>
+            <span>2,250,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/razer.webp" alt="Razer BlackWidow">
+            <p>Razer BlackWidow V4 Pro 75% Wireless</p>
+            <span>1,150,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/logitech.webp" alt="Logitech G PRO X 60">
+            <p>Logitech G PRO X 60 LIGHTSPEED</p>
+            <span>700,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/thermaltight.webp" alt="Thermalright PSU">
+            <p>Thermalright TR-TG1350-W 80 Plus</p>
+            <span>580,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/razer-nommo.webp" alt="Razer Nommo V2 X">
+            <p>Razer Nommo V2 X Full-Range 2.0 PC</p>
+            <span>480,000₮</span>
+          </div>
+          <div class="product">
+            <img src="images/deepcool.webp" alt="DeepCool Mystique">
+            <p>DeepCool Mystique 360 ARGB Liquid</p>
+            <span>450,000₮</span>
+          </div>
+        </div>
+      </div>
+     </section>
+
+<!-- footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-list logo">
+          <div class="footer-left-icons">
+            <img src="images/logo.png" alt="Newtech logo" class="logo-img">
+          <p>Feel the new technology</p>
+          <div class="social-foooter-icons">
+            <ion-icon class="icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="icon" name="logo-pinterest"></ion-icon>
+            <ion-icon class="icon" name="logo-linkedin"></ion-icon>
+            <ion-icon class="icon" name="logo-instagram"></ion-icon>
+          </div>
+          </div>
+        </div>
+    
+        <div class="footer-list">
+          <h3>Үндсэн цэс</h3>
+          <ul>
+            <li>Бүтээгдэхүүний Ангилал</li>
+            <li>Компьютер Угсрах</li>
+            <li>Файл татах</li>
+            <li>Холбоо Барих</li>
+            <li>Салбарууд</li>
+          </ul>
+        </div>
+    
+        <div class="footer-list">
+          <h3>Туслах цэс</h3>
+          <ul>
+            <li>Мэдээ, Мэдээлэл</li>
+            <li>Түгээмэл Асуулт</li>
+            <li>Тусламж</li>
+            <li>Үйлчилгээний Нөхцөл</li>
+            <li>Санал Хүсэлт</li>
+          </ul>
+        </div>
+    
+        <div class="footer-list">
+          <h3>Холбоо барих</h3>
+            <ul>
+              <li><ion-icon class="icon-right" name="call-outline"></ion-icon> +976 75051515</li>
+              <li><ion-icon class="icon-right" name="paper-plane-outline"></ion-icon> info@new-tech.mn</li>
+              <li><ion-icon class="icon-right" name="map-outline"></ion-icon></i> Компьютер ландын ард ХАА-н 30 байрны 1 давхарт NewTech компьютерийн дэлгүүр</li>
+            </ul>
+          
+        </div>
+      </div>
+    </footer>
+    <!-- <div class="copyright">
+      &copy; 2024 CREATED BY <span class="highlight">NEWTECH LLC</span>. All Rights Reserved
+    </div> -->
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  	<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

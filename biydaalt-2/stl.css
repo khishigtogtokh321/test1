@@ -1,0 +1,226 @@
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+    .header-top {
+      display: none;
+    }
+    #navbar-menu{
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      height: 550px;
+      width: 300px;
+      background-color: #e3e6f3;
+      box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+      padding: 80px 0 0 10px;
+      transition: 0.3s;
+    }
+    .header-search-container,
+    .header-user-actions{
+      display: none;
+      position: absolute;
+    }
+    
+    #navbar-menu.active{
+      right: 0;
+    }
+    
+    #close{
+      display: flex;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      color: #000;
+      font-size: 24px;
+    }
+    
+    .navbar-search-container{
+      display: flex;
+      position: relative;
+      top: 10px;
+    
+    }
+    
+    .menu-right .menu-title {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
+      font-size: 15px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      word-spacing: -2px;
+      display: inline-block;
+      position: relative;
+      left: 20px;
+    }
+    
+    
+    
+    .navbar-search-container{
+      display: flex;
+      
+    }
+    
+    .navbar{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      position: relative;
+      top: 0;
+      align-items: center;
+      justify-content: space-between;
+      justify-items: center;
+     
+    
+    }
+     .mobile{
+      display: flex;
+      padding-right: 30px;
+     }
+    .mobile .icon{
+      color: black;
+      font-size: 20px;
+    }    
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1000px;
+      margin: auto;
+      }
+      .logo-img {
+        height: 80px;
+        position: relative;
+      }
+    
+      .footer-list {
+        margin: 10px;
+        gap: 30px;
+        font-family: 'Poppins', sans-serif;
+      }
+    
+      .footer-left-icons {
+        position: relative;
+        float: left;
+        left: 10px;
+      }
+      footer {
+        background-color: #002366;
+        color: white;
+        padding: 30px 30px 20px;   
+    }
+ 
+    }
+    
+    @media screen and (max-width: 480px) {
+    
+    .header-top {
+      display: none;
+    }
+    #navbar-menu{
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      height: 100vh;
+      width: 300px;
+      background-color: #e3e6f3;
+      box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+      padding: 80px 0 0 10px;
+    }
+    .header-search-container,
+    .header-user-actions{
+      display: none;
+      
+    }
+    
+    .navbar-search-container{
+      display: flex;
+    position: absolute;
+    
+      
+    }
+    
+    
+    .navbar{
+      display: flex;
+      width: 100%;
+      position: relative;
+      top: 0;
+    }
+    
+    .container-main {
+      list-style: none;
+      display: flex;
+      
+      justify-content: space-around;
+      padding: 25px 70px;
+      margin-left: 180px;
+      justify-items: center;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 200px;
+    }
+    
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1000px;
+      margin: auto;
+      }
+      .logo-img {
+        height: 80px;
+        position: relative;
+      }
+    
+      .footer-list {
+        margin: 10px;
+        gap: 30px;
+        font-family: 'Poppins', sans-serif;
+      }
+    
+      .footer-left-icons {
+        position: relative;
+        float: left;
+        left: 10px;
+      }
+      footer {
+        background-color: #002366;
+        color: white;
+        padding: 30px 30px 20px;   
+    }
+    }
+    
+    @media screen and (min-width: 1024px) {
+    
+      .header-social-container{
+        list-style:none;
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        justify-content: space-between;
+        justify-items: center;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 14px;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    
+      .footer-left-icons {
+    
+       position: relative;
+       left: 20px;
+    }
+    
+    }
+    

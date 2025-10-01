@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+    * { box-sizing: border-box; margin:0; padding:0 }
+    body { font-family:'Segoe UI',sans-serif; background:#f5f7fa; color:#333 }
+
+ 
+    .detail { display:flex; max-width:1200px; margin:40px auto; gap:20px }
+    .thumbs { width:100px; display:flex;flex-direction:column;gap:10px }
+    .thumb, .main { background:#fff; border-radius:4px; overflow:hidden }
+    .thumb img, .main img { display:block; width:100% }
+    .main { flex:1; position:relative }
+    .zoom { position:absolute; bottom:10px; left:10px;
+            background:rgba(255,255,255,.9); border-radius:50%;
+            padding:8px; text-decoration:none; color:#333 }
+
+    .info { width:350px; background:#fff; padding:20px; border-radius:4px }
+    .info h1 { font-size:20px; color:#222; margin-bottom:8px }
+    .price { font-size:18px; font-weight:600;color:#222 }
+    .note  { font-size:13px;color:#d00; margin-bottom:12px }
+
+    .row { display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:14px }
+    .row a { text-decoration:none;color:#333 }
+    .row ion-icon { font-size:18px;color:#555 }
+
+    .box { display:flex;align-items:center;gap:12px;
+           padding:12px;background:#f9f9f9;border-radius:4px;
+           margin-bottom:8px;font-size:13px }
+    .box ion-icon { font-size:20px;color:#0070f3 }
+
+    .actions { display:flex;align-items:center;gap:12px;margin:16px 0 }
+    .qty { display:flex;border:1px solid#ccc;border-radius:4px;overflow:hidden }
+    .qty a { display:block;width:32px;height:32px;line-height:32px;
+              text-align:center;text-decoration:none;color:#333;
+              border-right:1px solid#ccc }
+    .qty span { display:block;width:40px;height:32px;line-height:32px;
+                text-align:center;background:#fff }
+    .btn { display:inline-block;padding:8px 16px;text-decoration:none;
+           background:#0041c4;color:#fff;border-radius:4px;font-size:14px }
+    .btn.buy { background:#0031a0 }
+    .btn:hover { opacity:.9 }
+
+    .meta { font-size:13px;color:#555; margin-top:12px }
+    .meta div { margin:6px 0 }
+    .share { display:flex;gap:8px;margin-top:8px }
+    .share a { text-decoration:none;color:#555;font-size:18px }
+
+    /* ==== Detailed Specs ==== */
+    .specs-section { max-width:1200px; margin:40px auto; padding:0 10px }
+    .specs-section h2 {
+      font-size:18px; font-weight:600; color:#222;
+      margin-bottom:16px;
+    }
+    .specs-grid {
+      display:flex; gap:20px;
+      flex-wrap: wrap;
+    }
+    .specs-table {
+      flex:1 1 400px;
+      background:#fff; border-radius:4px;
+      overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.1);
+    }
+    .specs-table h3 {
+      background:#fafafa; padding:12px;
+      margin:0; font-size:14px; font-weight:600;
+      border-bottom:1px solid #eee;
+    }
+    .specs-table table {
+      width:100%; border-collapse: collapse;
+    }
+    .specs-table th,
+    .specs-table td {
+      padding:10px 12px; border-bottom:1px solid #eee;
+      text-align:left; font-size:14px;
+    }
+    .specs-table th { width:30%; background:#fafafa; }
+
+    .specs-image {
+      flex:1 1 400px;
+      background:#fff; border-radius:4px;
+      overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.1);
+    }
+    .specs-image img { display:block; width:100%; }
+  </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нүүр хуудас:</title>
+    <link rel="stylesheet" href="styles.css">
+
+     <!--
+    - google font link
+    -->
+    <script src="https://kit.fontawesome.com/a416c71398.js" crossorigin="anonymous"></script>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    </head>
+<body>
+  <header>
+    <!-- header top -->
+      <div class="header-top">
+        <div class="container-top">
+            <ul class="header-social-container">
+    
+              <li class="nav-item-left"><b>Утас:</b> +976 7505-1515 , +976 8889-8998
+                &nbsp&nbsp</li>
+    
+              <li class="nav-item-left"><b>И-Мэйл:</b>info@new-tech.mn
+              </li>
+    
+              <li class="nav-item-right"><b>хаяг:</b>  Компьютер ландын ард ХАА-н 30 байрны 1 давхарт </li>    
+            </ul>
+        </div>
+      </div>
+
+    <!-- header main -->
+      <div class="navbar">
+        <a href="index.html" class="header-logo">
+          <img src="images/logo.png" alt="new-teck" width="120" height="36">
+        </a>
+        <div  class="container-main">
+       
+          <div class="header-search-container">
+            <input class="search-field" type="search" name="search-field" placeholder="Бүтээгдэхүүн хайх" >
+            <ion-icon class="search-outline" name="search-outline"></ion-icon>
+          </div>
+          <div class="header-user-actions">
+            <button class="login-register">
+              <ion-icon class="person-outline" name="person-outline"></ion-icon>
+              <span><a href="login-register.html" style="display: flex; text-decoration: none; color: white;">Login&nbsp/&nbspRegister</a></span>
+            </button>
+            <div class="divider"></div>
+            <button type="button" class="action-btn">
+              
+             <a href="Buteegdehuun-angilal.html"> <ion-icon class="icon-wrapper" name="albums-outline"></ion-icon></a>
+              <span class="count">0</span>
+            </button>
+            <button type="button" class="action-btn">
+             <a href="Buteegdehuun-angilal.html"> <ion-icon class="icon-wrapper" name="star-outline"></ion-icon></a>
+                <span class="count">0</span>
+            </button>
+            <button type="button" class="action-btn">
+              <a href="Baraanii delgerengui.html"><ion-icon class="icon-wrapper" name="bag-outline"></ion-icon></a>
+              <span class="count">0</span>
+            </button>
+          </div>
+        </div>
+        
+        
+        <div class="mobile">
+          <div class="icon" id="bar">☰</div>
+        </div>
+  
+      </div>
+      
+    <!-- header navigation -->
+      <div class="desktop-navigation-menu">
+
+        <div class="container-navbar">
+  
+          <ul id="navbar-menu" class="desktop-menu-category-list">
+  
+            <li class="menu-left">
+              <a href="Buteegdehuun-angilal.html" class="menu-title">Бүтээгдэхүүний ангилал</a>
+              <ion-icon class="drop-icon"  name="chevron-down-outline"></ion-icon>
+              <div class="dropdown-panel">
+
+                <div class="dropdown-group primary-group">
+            
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Компьютерын хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">CPU</a></li>
+                    <li class="penal-list-item"><a href="#">Motherboard</a></li>
+                    <li class="penal-list-item"><a href="#">Ram</a></li>
+                    <li class="penal-list-item"><a href="#">SSD/NVME M2</a></li>
+                    <li class="penal-list-item"><a href="#">HDD</a></li>
+                    <li class="penal-list-item"><a href="#">Graphic Card</a></li>
+                    <li class="penal-list-item"><a href="#">Power Supply</a></li>
+                    <li class="penal-list-item"><a href="#">Coolers</a></li>
+                    <li class="penal-list-item"><a href="#">Computer Cases</a></li>
+                  </ul>
+              
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Дагалдах хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">Mouse</a></li>
+                    <li class="penal-list-item"><a href="#">Keyboards</a></li>
+                    <li class="penal-list-item"><a href="#">Headsets</a></li>
+                    <li class="penal-list-item"><a href="#">Mouse Pads</a></li>
+                    <li class="penal-list-item"><a href="#">Microphone</a></li>
+                    <li class="penal-list-item"><a href="#">Web Camera</a></li>
+                    <li class="penal-list-item"><a href="#">Speaker</a></li>
+                  </ul>
+
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Бусад хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">Тоглоомын сандал & ширээ</a></li>
+                    <li class="penal-list-item"><a href="#">Fans</a></li>
+                    <li class="penal-list-item"><a href="#">Cable | Converter</a></li>
+                    <li class="penal-list-item"><a href="#">Network Devices</a></li>
+                    <li class="penal-list-item"><a href="#">Figures & Toys</a></li>
+                    <li class="penal-list-item"><a href="#">Программ хангамж</a></li>
+                    <li class="penal-list-item"><a href="#">Бусад</a></li>
+                  </ul>
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title">
+                      <img src="images/drop-imgae.jpg" width="400px" height="300px" >
+                     &nbsp&nbsp&nbsp
+                    </li>
+                  </ul>
+                </div>          
+                <div class="dropdown-group secondary-group">
+
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a class="drop-title" href="Buteegdehuun-angilal.html">Дэлгэц</a></li>
+                    <li class="drop-menu-title"><a class="drop-title" href="#">Playstation</a></li>
+                    <li class="penal-list-item"><a class="penal-a" href="#">PS5 & Accessories</a></li>
+                    <li class="penal-list-item"><a class="penal-a" href="#">Games</a></li>
+                  </ul>
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Хадгалах хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">Зөөврийн хард</a></li>
+                    <li class="penal-list-item"><a href="#">Флаш диск</a></li>
+                    <li class="penal-list-item"><a href="#">Memory card</a></li>
+                  </ul>
+            
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Принтер</a></li>
+                    <li class="penal-list-item"><a href="#">Принтер</a></li>
+                    <li class="penal-list-item"><a href="#">Принтерийн хор</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu-left">
+              <a href="computer-builder.html" class="menu-title">Компьютер угсрах</a>
+            </li>
+  
+            <li class="menu-left">
+              <a href="Buteegdehuun-angilal.html" class="menu-title">Бэлэн Компьютер</a>
+              <ion-icon class="drop-icon"  name="chevron-down-outline"></ion-icon>
+              <div class="dropdown-panel-second">
+                <div class="dropdown-group-second">
+                  <ul class="drop-second-list">
+                    <li class="penal-list-second"><a href="#">Gaming & Render</a></li>
+                    <li class="penal-list-second"><a href="#">Office</a></li>
+                  </ul>
+                </div>
+              </div>  
+            </li>
+            <li class="menu-left">
+              <a href="Upgrage.html" class="menu-title">Upgrage now</a>
+            </li>
+            <li class="menu-right">
+              <a href="Salbaruud.html" class="menu-title">Салбарууд</a>
+            </li>
+            <li class="menu-right">
+              <a href="Holboo-barih.html" class="menu-title">Холбоо барих</a>
+            </li>
+            <a  href="#" id="close">X</a>
+
+            <div class="navbar-search-container">
+              <input class="search-field" type="search" name="search-field" placeholder="Бүтээгдэхүүн хайх" >
+              <ion-icon class="search-outline" name="search-outline"></ion-icon>
+            </div>
+          </ul>
+    
+        </div>
+      
+      </div>
+      
+  </header>
+ <!-- ====== Product Detail ====== -->
+ <div class="detail">
+  <!-- Thumbnails -->
+  <div class="thumbs">
+    <a href="?img=Intel Core Ultra 9 Gaming Processor.jpg" class="thumb"><img src="thumb1.jpg" alt=""></a>
+    <a href="?img=Intel Core Ultra 9 Gaming Processor.jpg" class="thumb"><img src="thumb2.jpg" alt=""></a>
+    <a href="?img=Intel Core Ultra 9 Gaming Processor.jpg" class="thumb"><img src="thumb3.jpg" alt=""></a>
+  </div>
+
+  <!-- Main Image -->
+  <div class="main">
+    <img src="Intel Core Ultra 9 Gaming Processor.jpg" alt="">
+    <a href="Intel Core Ultra 9 Gaming Processor.jpg" class="zoom" target="_blank">🔍</a>
+  </div>
+
+  <!-- Product Info -->
+  <div class="info">
+    <h1>Razer BlackWidow V4 Pro 75% Wireless</h1>
+    <div class="price">₮ 1,150,000</div>
+    <div class="note">/Үнийн дүнд НӨАТ ороогүй !!!/</div>
+
+    <div class="row">
+      <ion-icon name="car-outline"></ion-icon>
+      <a href="#">Хүргэлт: Үнэгүй</a>
+    </div>
+    <div class="row">
+      <ion-icon name="cube-outline"></ion-icon>
+      <a href="#">Үлдэгдэл: Байгаа</a>
+    </div>
+
+    <div class="box">
+      <ion-icon name="repeat-outline"></ion-icon>
+      <span>Storepay-гаар 4 хувааж төлөх боломжтой.</span>
+    </div>
+    <div class="box">
+      <ion-icon name="card-outline"></ion-icon>
+      <span>Хаанбанкны зээлээр авах боломжтой.</span>
+    </div>
+
+    <div class="actions">
+      <div class="qty">
+        <!-- server renders current qty into the middle span -->
+        <a href="?qty=1">−</a>
+        <span>2</span>
+        <a href="?qty=3">＋</a>
+      </div>
+      <a href="/add-to-cart?product=blackwidow&qty=2" class="btn">САГСАНД НЭМЭХ</a>
+      <a href="/buy-now?product=blackwidow&qty=2" class="btn buy">ХУДАЛДАЖ АВАХ</a>
+    </div>
+
+    <div class="meta">
+      <div><strong>Ангилал:</strong> Keyboards</div>
+      <div><strong>Tag:</strong> Razer BlackWidow V4 Pro 75% Wireless</div>
+      <div class="share">
+        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-pinterest"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="#"><ion-icon name="share-social-outline"></ion-icon></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== Detailed Specs Section ====== -->
+<section class="specs-section">
+  <h2>ДЭЛГЭРЭНГҮЙ МЭДЭЭЛЭЛ</h2>
+  <div class="specs-grid">
+    <!-- Specs Table -->
+    <div class="specs-table">
+      <h3>ҮЗҮҮЛЭЛТ</h3>
+      <table>
+        <tr><th>Brand</th><td>Razer</td></tr>
+        <tr><th>Product Name</th><td>BlackWidow V4 PRO 75%</td></tr>
+        <tr><th>Type</th><td>Mechanical</td></tr>
+        <tr><th>Switch</th><td>Razer™ Mechanical Switches Gen‑3 (Tactile)</td></tr>
+        <tr><th>Connection Type</th><td>Wireless</td></tr>
+        <tr><th>Backlight</th><td>Razer Chroma™ RGB</td></tr>
+        <tr><th>Design Style</th><td>Gaming</td></tr>
+        <tr><th>Size</th><td>75% TKL</td></tr>
+      </table>
+    </div>
+
+    <!-- Large Detail Image -->
+    <div class="specs-image">
+      <img src="Intel Core Ultra 9 Gaming Processor.jpg" alt="Detailed view of BlackWidow on desk">
+    </div>
+  </div>
+</section>
+
+    <!-- <section>
+      <div class="section-container">
+        <div class="side-bar"><p>side bar</p></div>
+        <div class="body-area"><p>body area</p></div>
+      </div>
+    </section> -->
+   
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-list logo">
+          <div class="footer-left-icons">
+            <img src="images/logo.png" alt="Newtech logo" class="logo-img">
+          <p>Feel the new technology</p>
+          <div class="social-foooter-icons">
+            <ion-icon class="icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="icon" name="logo-pinterest"></ion-icon>
+            <ion-icon class="icon" name="logo-linkedin"></ion-icon>
+            <ion-icon class="icon" name="logo-instagram"></ion-icon>
+          </div>
+          </div>
+        </div>
+    
+        <div class="footer-list">
+          <h3>Үндсэн цэс</h3>
+          <ul>
+            <li><a href="Buteegdehuun-angilal.html">Бүтээгдэхүүний Ангилал</a></li>
+            <li><a href="computer-builder.html">Компьютер Угсрах</a></li>
+            <li><a href="#">Файл татах</a></li>
+            <li><a href="Holboo-barih.html">Холбоо Барих</a></li>
+            <li><a href="Salbaruud.html">Салбарууд</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-list">
+          <h3>Туслах цэс</h3>
+          <ul>
+            <li><a href="medee-medeelel.html">Мэдээ, Мэдээлэл</a></li>
+            <li><a href="#">Түгээмэл Асуулт</a></li>
+            <li><a href="#">Тусламж</a></li>
+            <li><a href="#">Үйлчилгээний Нөхцөл</a></li>
+            <li><a href="Sanal huselt.html">Санал Хүсэлт</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-list">
+          <h3>Холбоо барих</h3>
+            <ul>
+              <li><ion-icon class="icon-right" name="call-outline"></ion-icon> +976 75051515</li>
+              <li><ion-icon class="icon-right" name="paper-plane-outline"></ion-icon> info@new-tech.mn</li>
+              <li><ion-icon class="icon-right" name="map-outline"></ion-icon></i> Компьютер ландын ард ХАА-н 30 байрны 1 давхарт NewTech компьютерийн дэлгүүр</li>
+            </ul>
+          
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      &copy; 2024 CREATED BY <span class="highlight">NEWTECH LLC</span>. All Rights Reserved
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  	<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

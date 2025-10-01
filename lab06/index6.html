@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab6</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        window.onload = function () {
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "skyblue";
+                ctx.fillRect(0, 0, 760, 400); 
+    
+                // nar
+                ctx.beginPath();
+                ctx.arc(500, 80, 50, 0, Math.PI * 2);
+                ctx.fillStyle = "yellow";
+                ctx.fill();
+                ctx.stroke();
+    
+                // sar
+                ctx.beginPath();
+                ctx.arc(90, 80, 40, 0, Math.PI * 2);
+                ctx.fillStyle = "black";
+                ctx.fill();
+                ctx.stroke();
+    
+                ctx.beginPath();
+                ctx.arc(115, 80, 40, 0, Math.PI * 2);
+                ctx.fillStyle = "skyblue";
+                ctx.fill();
+    
+                // uul
+                ctx.beginPath();
+                ctx.moveTo(150, 300);
+                ctx.lineTo(300, 100);
+                ctx.lineTo(450, 300);
+                ctx.fillStyle = "gray";    
+                ctx.fill();
+                ctx.stroke();
+    
+                // hunii tolgoi 
+                ctx.beginPath();
+                ctx.arc(400, 240, 15, 0, Math.PI * 2); 
+                ctx.stroke();
+    
+                // biy
+                ctx.beginPath();
+                ctx.moveTo(400, 250);
+                ctx.lineTo(400, 300);
+                ctx.stroke();
+    
+                // gar
+                ctx.beginPath();
+                ctx.moveTo(375, 265);
+                ctx.lineTo(425, 265);
+                ctx.stroke();
+    
+                // hul
+                ctx.beginPath();
+                ctx.moveTo(400, 295);
+                ctx.lineTo(385, 340);
+                ctx.moveTo(400, 295);
+                ctx.lineTo(415, 340);
+                ctx.stroke();
+                
+                // baishin
+                ctx.fillStyle = "brown";
+                ctx.fillRect(100, 200, 150, 150); 
+                ctx.fillStyle = "red";
+                ctx.beginPath();
+                ctx.moveTo(100, 200);
+                ctx.lineTo(175, 130);
+                ctx.lineTo(250, 200);
+                ctx.closePath();
+                ctx.fill();
+    
+                // tsonh
+                ctx.fillStyle = "blue";
+                ctx.fillRect(120, 220, 40, 40);
+                ctx.fillRect(190, 220, 40, 40);
+    
+                // haalga
+                ctx.fillStyle = "black";
+                ctx.fillRect(160, 280, 30, 70);
+    
+                // gazar
+                ctx.fillStyle = "brown";
+                ctx.fillRect(50, 345, 1000, 30); 
+    
+        }
+    </script>
+</head>
+<body>
+    
+   <div class="header">
+    <header>
+        <!-- duu oruulah -->
+        <audio class="audio" controls autoplay muted >
+           <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+       
+    </header>
+   </div>
+   <div class="mycontainer">
+       <div class="section_container">
+            <div>
+                <video width="400px" height="200px" controls>
+            <source src="bicleg.mp4" type="video/mp4">
+            </video>
+            </div>
+            <div class="myCanvas">
+                <canvas class="myCanvas" id="myCanvas" width="700px" height="350px"></canvas>
+            </div>
+       </div>
+        <div class="aside_container">
+
+            <svg width="700" height="400">
+                <rect class="sky" x="0" y="0" width="100%" height="400" fill="skyblue" />
+                <circle class="sun" cx="150" cy="100" r="30" fill="yellow" stroke="orange" stroke-width="3"/>
+
+                <circle class="sun" cx="550" cy="100" r="25" fill="lightgray" opacity="0"/>
+
+                <g class="could">
+                    <circle cx="200" cy="100" r="30" fill="white"/>
+                    <circle cx="230" cy="90" r="40" fill="white"/>
+                    <circle cx="260" cy="100" r="30" fill="white"/>
+                </g>
+                
+                <!--  boroo-->
+                <g id="rain">
+                    <line x1="210" y1="130" x2="210" y2="160" stroke="darkblue" stroke-width="2"/>
+                    <line x1="230" y1="120" x2="230" y2="150" stroke="darkblue" stroke-width="2"/>
+                    <line x1="250" y1="130" x2="250" y2="160" stroke="darkblue" stroke-width="2"/>
+                </g>
+                
+                <!-- baishin -->
+                <rect x="100" y="200" width="150" height="175" fill="brown"/>
+                <polygon points="100,200 175,130 250,200" fill="red"/>
+                <rect class="window" x="120" y="220" width="40" height="40" fill="blue"/>
+                <rect class="window" x="190" y="220" width="40" height="40" fill="blue"/>
+                <rect x="160" y="280" width="30" height="85" fill="black"/>
+        
+                <!-- mashin -->
+                <g class="car">
+                    <rect x="300" y="300" width="100" height="50" fill="blue"/>
+                    <circle cx="320" cy="360" r="15" fill="black"/>
+                    <circle cx="380" cy="360" r="15" fill="black"/>
+                </g>
+        
+                <!-- gazar -->
+                <rect x="0" y="375" width="100%" height="20" fill="green" />
+            </svg>        
+        </div>
+        
+    </div>
+    <div class="footer">
+        <footer>
+            <h1>footer</h1>
+        </footer>
+    </div>
+
+   
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container {
+          max-width: 1000px;
+          margin: 0 auto;
+          background: #ffffff;
+          border-radius: 6px;
+          padding-top: 80px;
+          height: 90vh;
+        }
+    
+        h1 {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 16px;
+          color: #222;
+        }
+    
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+    
+        thead th {
+          text-align: left;
+          font-size: 14px;
+          color: #555;
+          padding: 12px 8px;
+          border-bottom: 1px solid #eee;
+        }
+    
+        thead th .sort {
+          margin-left: 4px;
+          font-size: 12px;
+          color: #aaa;
+        }
+    
+        tbody tr {
+          border-bottom: 1px solid #f0f0f0;
+        }
+        tbody tr:last-child {
+          border-bottom: none;
+        }
+    
+        td {
+          padding: 12px 8px;
+          font-size: 14px;
+          vertical-align: middle;
+        }
+    
+        td:nth-child(1) { width: 40px; color: #777; }
+        td.order-id { color: #333; }
+        td.product {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        td.product img {
+          width: 32px;
+          height: 32px;
+          object-fit: contain;
+        }
+        td.address { color: #555; }
+        td.date, td.price { color: #333; font-weight: 600; width: 100px; }
+    
+        .status-pill {
+          display: inline-block;
+          padding: 4px 12px;
+          border-radius: 12px;
+          font-size: 12px;
+          font-weight: 600;
+          text-align: center;
+          min-width: 80px;
+        }
+        .complete {
+          background: rgba(72,187,120,0.2);
+          color: #48bb78;
+        }
+        .pending {
+          background: rgba(251,191,36,0.2);
+          color: #fbbf24;
+        }
+        .canceled {
+          background: rgba(239,68,68,0.2);
+          color: #ef4444;
+        }
+      </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zahialga</title>
+    <link rel="stylesheet" href="styles.css">
+
+     <!--
+    - google font link
+    -->
+    <script src="https://kit.fontawesome.com/a416c71398.js" crossorigin="anonymous"></script>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    </head>
+<body>
+  <header>
+    <!-- header top -->
+      <div class="header-top">
+        <div class="container-top">
+            <ul class="header-social-container">
+    
+              <li class="nav-item-left"><b>Утас:</b> +976 7505-1515 , +976 8889-8998
+                &nbsp&nbsp</li>
+    
+              <li class="nav-item-left"><b>И-Мэйл:</b>info@new-tech.mn
+              </li>
+    
+              <li class="nav-item-right"><b>хаяг:</b>  Компьютер ландын ард ХАА-н 30 байрны 1 давхарт </li>    
+            </ul>
+        </div>
+      </div>
+
+    <!-- header main -->
+      <div class="navbar">
+        <a href="index.html" class="header-logo">
+          <img src="images/logo.png" alt="new-teck" width="120" height="36">
+        </a>
+        <div  class="container-main">
+       
+          <div class="header-search-container">
+            <input class="search-field" type="search" name="search-field" placeholder="Бүтээгдэхүүн хайх" >
+            <ion-icon class="search-outline" name="search-outline"></ion-icon>
+          </div>
+          <div class="header-user-actions">
+            <button class="login-register">
+              <ion-icon class="person-outline" name="person-outline"></ion-icon>
+              <span><a href="login-register.html" style="display: flex; text-decoration: none; color: white;">Login&nbsp/&nbspRegister</a></span>
+            </button>
+            <div class="divider"></div>
+            <button type="button" class="action-btn">
+              
+             <a href="Buteegdehuun-angilal.html"> <ion-icon class="icon-wrapper" name="albums-outline"></ion-icon></a>
+              <span class="count">0</span>
+            </button>
+            <button type="button" class="action-btn">
+             <a href="Buteegdehuun-angilal.html"> <ion-icon class="icon-wrapper" name="star-outline"></ion-icon></a>
+                <span class="count">0</span>
+            </button>
+            <button type="button" class="action-btn">
+              <a href="Baraanii delgerengui.html"><ion-icon class="icon-wrapper" name="bag-outline"></ion-icon></a>
+              <span class="count">0</span>
+            </button>
+          </div>
+        </div>
+        
+        
+        <div class="mobile">
+          <div class="icon" id="bar">☰</div>
+        </div>
+  
+      </div>
+      
+    <!-- header navigation -->
+      <div class="desktop-navigation-menu">
+
+        <div class="container-navbar">
+  
+          <ul id="navbar-menu" class="desktop-menu-category-list">
+  
+            <li class="menu-left">
+              <a href="Buteegdehuun-angilal.html" class="menu-title">Бүтээгдэхүүний ангилал</a>
+              <ion-icon class="drop-icon"  name="chevron-down-outline"></ion-icon>
+              <div class="dropdown-panel">
+
+                <div class="dropdown-group primary-group">
+            
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Компьютерын хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">CPU</a></li>
+                    <li class="penal-list-item"><a href="#">Motherboard</a></li>
+                    <li class="penal-list-item"><a href="#">Ram</a></li>
+                    <li class="penal-list-item"><a href="#">SSD/NVME M2</a></li>
+                    <li class="penal-list-item"><a href="#">HDD</a></li>
+                    <li class="penal-list-item"><a href="#">Graphic Card</a></li>
+                    <li class="penal-list-item"><a href="#">Power Supply</a></li>
+                    <li class="penal-list-item"><a href="#">Coolers</a></li>
+                    <li class="penal-list-item"><a href="#">Computer Cases</a></li>
+                  </ul>
+              
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Дагалдах хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">Mouse</a></li>
+                    <li class="penal-list-item"><a href="#">Keyboards</a></li>
+                    <li class="penal-list-item"><a href="#">Headsets</a></li>
+                    <li class="penal-list-item"><a href="#">Mouse Pads</a></li>
+                    <li class="penal-list-item"><a href="#">Microphone</a></li>
+                    <li class="penal-list-item"><a href="#">Web Camera</a></li>
+                    <li class="penal-list-item"><a href="#">Speaker</a></li>
+                  </ul>
+
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Бусад хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">Тоглоомын сандал & ширээ</a></li>
+                    <li class="penal-list-item"><a href="#">Fans</a></li>
+                    <li class="penal-list-item"><a href="#">Cable | Converter</a></li>
+                    <li class="penal-list-item"><a href="#">Network Devices</a></li>
+                    <li class="penal-list-item"><a href="#">Figures & Toys</a></li>
+                    <li class="penal-list-item"><a href="#">Программ хангамж</a></li>
+                    <li class="penal-list-item"><a href="#">Бусад</a></li>
+                  </ul>
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title">
+                      <img src="images/drop-imgae.jpg" width="400px" height="300px" >
+                     &nbsp&nbsp&nbsp
+                    </li>
+                  </ul>
+                </div>          
+                <div class="dropdown-group secondary-group">
+
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a class="drop-title" href="Buteegdehuun-angilal.html">Дэлгэц</a></li>
+                    <li class="drop-menu-title"><a class="drop-title" href="#">Playstation</a></li>
+                    <li class="penal-list-item"><a class="penal-a" href="#">PS5 & Accessories</a></li>
+                    <li class="penal-list-item"><a class="penal-a" href="#">Games</a></li>
+                  </ul>
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Хадгалах хэрэгсэл</a></li>
+                    <li class="penal-list-item"><a href="#">Зөөврийн хард</a></li>
+                    <li class="penal-list-item"><a href="#">Флаш диск</a></li>
+                    <li class="penal-list-item"><a href="#">Memory card</a></li>
+                  </ul>
+            
+                  <ul class="drop-panel-list">
+                    <li class="drop-menu-title"><a href="Buteegdehuun-angilal.html">Принтер</a></li>
+                    <li class="penal-list-item"><a href="#">Принтер</a></li>
+                    <li class="penal-list-item"><a href="#">Принтерийн хор</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu-left">
+              <a href="computer-builder" class="menu-title">Компьютер угсрах</a>
+            </li>
+  
+            <li class="menu-left">
+              <a href="Buteegdehuun-angilal.html" class="menu-title">Бэлэн Компьютер</a>
+              <ion-icon class="drop-icon"  name="chevron-down-outline"></ion-icon>
+              <div class="dropdown-panel-second">
+                <div class="dropdown-group-second">
+                  <ul class="drop-second-list">
+                    <li class="penal-list-second"><a href="#">Gaming & Render</a></li>
+                    <li class="penal-list-second"><a href="#">Office</a></li>
+                  </ul>
+                </div>
+              </div>  
+            </li>
+            <li class="menu-left">
+              <a href="Upgrage.html" class="menu-title">Upgrage now</a>
+            </li>
+            <li class="menu-right">
+              <a href="Salbaruud.html" class="menu-title">Салбарууд</a>
+            </li>
+            <li class="menu-right">
+              <a href="Holboo-barih.html" class="menu-title">Холбоо барих</a>
+            </li>
+            <a  href="#" id="close">X</a>
+
+            <div class="navbar-search-container">
+              <input class="search-field" type="search" name="search-field" placeholder="Бүтээгдэхүүн хайх" >
+              <ion-icon class="search-outline" name="search-outline"></ion-icon>
+            </div>
+          </ul>
+    
+        </div>
+      
+      </div>
+      
+  </header>
+    <div class="container">
+        <h1>Orders</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Order ID <span class="sort">⇅</span></th>
+              <th>Product Name <span class="sort">⇅</span></th>
+              <th>Address <span class="sort">⇅</span></th>
+              <th>Date <span class="sort">⇅</span></th>
+              <th>Price <span class="sort">⇅</span></th>
+              <th>Status <span class="sort">⇅</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td class="order-id">#78522135</td>
+              <td class="product">
+                <img src="images/1-2 (1).jpg" alt="Smart watch">
+                Smart watch
+              </td>
+              <td class="address">351 Shearwood Forest Drive</td>
+              <td class="date">20/03/2021</td>
+              <td class="price">$376.00</td>
+              <td><span class="status-pill complete">Complete</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="order-id">#78522135</td>
+              <td class="product">
+                <img src="images/1-2 (11).jpg" alt="Headphones">
+                Headphones
+              </td>
+              <td class="address">6391 Elgin St. Celina</td>
+              <td class="date">21/03/2021</td>
+              <td class="price">$276.00</td>
+              <td><span class="status-pill pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td class="order-id">#78522135</td>
+              <td class="product">
+                <img src="images/1-2 (3).jpg" alt="iPhone Pro">
+                iPhone Pro
+              </td>
+              <td class="address">8502 Preston Rd. Inglewood</td>
+              <td class="date">01/04/2021</td>
+              <td class="price">$300.00</td>
+              <td><span class="status-pill canceled">Canceled</span></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td class="order-id">#78522135</td>
+              <td class="product">
+                <img src="images/1-2 (4).jpg" alt="AirPods Pro">
+                Apple AirPods Pro
+              </td>
+              <td class="address">4517 Washington Ave. Manchester</td>
+              <td class="date">01/04/2021</td>
+              <td class="price">$200.00</td>
+              <td><span class="status-pill complete">Complete</span></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td class="order-id">#78522135</td>
+              <td class="product">
+                <img src="images/1-2 (6).jpg" alt="Nike Air Max">
+                Nike Air Max
+              </td>
+              <td class="address">3891 Ranchview Dr. Richardson</td>
+              <td class="date">02/04/2021</td>
+              <td class="price">$100.00</td>
+              <td><span class="status-pill complete">Complete</span></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td class="order-id">#78522135</td>
+              <td class="product">
+                <img src="images/1-2 (8).jpg" alt="Girls Bag">
+                Girls Bag
+              </td>
+              <td class="address">2972 Westheimer Rd. Santa Ana</td>
+              <td class="date">02/04/2021</td>
+              <td class="price">$76.00</td>
+              <td><span class="status-pill pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td class="order-id">#78522135</td>
+              <td class="product">
+                <img src="images/1-2 (11).jpg" alt="Canon 600d">
+                Canon 600d
+              </td>
+              <td class="address">3517 W. Gray St. Utica</td>
+              <td class="date">03/04/2021</td>
+              <td class="price">$500.00</td>
+              <td><span class="status-pill pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td class="order-id">#78522135</td>
+              <td class="product">
+                <img src="images/feed-back.webp" alt="Apple Watch">
+                Apple Watch
+              </td>
+              <td class="address">4140 Parker Rd. Allentown</td>
+              <td class="date">07/04/2021</td>
+              <td class="price">$300.00</td>
+              <td><span class="status-pill complete">Complete</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+
+
+   
+   
+
+      <footer>
+        <div class="footer-container">
+          <div class="footer-list logo">
+            <div class="footer-left-icons">
+              <img src="images/logo.png" alt="Newtech logo" class="logo-img">
+            <p>Feel the new technology</p>
+            <div class="social-foooter-icons">
+              <ion-icon class="icon" name="logo-facebook"></ion-icon>
+              <ion-icon class="icon" name="logo-twitter"></ion-icon>
+              <ion-icon class="icon" name="logo-pinterest"></ion-icon>
+              <ion-icon class="icon" name="logo-linkedin"></ion-icon>
+              <ion-icon class="icon" name="logo-instagram"></ion-icon>
+            </div>
+            </div>
+          </div>
+      
+          <div class="footer-list">
+            <h3>Үндсэн цэс</h3>
+            <ul>
+              <li><a href="Buteegdehuun-angilal.html">Бүтээгдэхүүний Ангилал</a></li>
+              <li><a href="computer-builder.html">Компьютер Угсрах</a></li>
+              <li><a href="#">Файл татах</a></li>
+              <li><a href="Holboo-barih.html">Холбоо Барих</a></li>
+              <li><a href="Salbaruud.html">Салбарууд</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-list">
+            <h3>Туслах цэс</h3>
+            <ul>
+              <li><a href="medee-medeelel.html">Мэдээ, Мэдээлэл</a></li>
+              <li><a href="#">Түгээмэл Асуулт</a></li>
+              <li><a href="#">Тусламж</a></li>
+              <li><a href="#">Үйлчилгээний Нөхцөл</a></li>
+              <li><a href="Sanal huselt.html">Санал Хүсэлт</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-list">
+            <h3>Холбоо барих</h3>
+              <ul>
+                <li><ion-icon class="icon-right" name="call-outline"></ion-icon> +976 75051515</li>
+                <li><ion-icon class="icon-right" name="paper-plane-outline"></ion-icon> info@new-tech.mn</li>
+                <li><ion-icon class="icon-right" name="map-outline"></ion-icon></i> Компьютер ландын ард ХАА-н 30 байрны 1 давхарт NewTech компьютерийн дэлгүүр</li>
+              </ul>
+            
+          </div>
+        </div>
+      </footer>
+    <div class="copyright">
+      &copy; 2024 CREATED BY <span class="highlight">NEWTECH LLC</span>. All Rights Reserved
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  	<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+</body>
+</html>.
